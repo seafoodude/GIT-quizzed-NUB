@@ -1,5 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --purp: #AA77FF;
+    --lightb: #C9EEFF;
+    --blu: #97DEFF;
+    --darkb: #62CDFF;
+    --blck: black;
+}
+
+body {
+    display: block;
+    
+}
+
+header {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5vh;
+    padding: 3vh;
+}
+
+h2 {
+    font-size: 4vh;
+    text-align: center;
+    padding: 10vh 20vw;
+}
+
+h3 {
+    font-size: 3vh;
+    margin-left: 15vw;
+}
+
+p {
+    text-align: center;
+    font-size: 2vh;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+
+}
+
+li {
+    
+}
+
 .eachPage {
-    width: 98vw;
+    width: 100%;
     height: 100vh;
-    background-color: blue;
+    background-color: var(--purp);
+}
+
+.time-score {
+
+}
+
+.highscores {
+
+}
+
+.question-form {
+
+}
+
+.answer-options {
+    margin-top: 5%;
+    margin-left: 40vw;
+    font-size: 3vh;
+}
+
+.each-answer {
+    padding-bottom: 2vh;
+    background-color: ;
 }
