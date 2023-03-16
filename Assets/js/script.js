@@ -1,18 +1,21 @@
-// var startButton;
-// var quizScreen;
+var startButton;
+var quizScreen;
 
-// var duration = 20;
-// var countdown = document.getElementById('time');
+var duration = 20;
+var countdown = document.getElementById('time');
 
-// var timer = setInterval(() => {
-//     countdown.textContent = duration;
-//     duration--;
+var timer = setInterval(() => {
+    countdown.textContent = duration;
+    duration--;
 
-//     if (duration ===0) {
-//         clearInterval(timer);
-//         countdown.innerHTML = "Time's up!";
-//     }
-// }, 1000);
+    if (duration ===0) {
+        clearInterval(timer);
+        countdown.innerHTML = "Time's up!";
+        localStorage.setItem('mostRecentScore', score);
+
+        return window.location.assign('./end.html');
+    }
+}, 1000);
 
 var question = document.querySelector('#question');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
