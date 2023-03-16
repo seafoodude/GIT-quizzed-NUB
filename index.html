@@ -5,138 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./Assets/style.css">
+    <link rel="stylesheet" type="text/css" href="./Assets/css/style.css">
     <title>CodeQuiz</title>
 </head>
 
 <body>
-    <header class="eachPage" id="home">
-        <h1>
-            Coding Quiz Challenge
-        </h1>
-        <p>
-            Try to answer the following code-related questions within the time limit. <br> Keep in mind that incorrect
-            answers will penalize your score/time by ten seconds!
-        </p>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-            </ul>
-            <ol>
-                <li><a href="#question-1">Question 1</a></li>
-                <li><a href="#question-2">Question 2</a></li>
-                <li><a href="#question-3">Question 3</a></li>
-                <li><a href="#question-4">Question 4</a></li>
-                <li><a href="#question-5">Question 5</a></li>
-            </ol>
-        </nav>
+    <div class="container">
+        <div id="home" class="flex-column flex-center">
+            <h1>Coding Quiz Challenge</h1>
+            <p>
+                Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+            </p>
 
-        <div class="highscores">
-            Highscores
+            <a href="/game.html" class="btn">Play</a>
+            <a href="/highscores.html" id="highscore-btn" class="btn">Highscores</a>
         </div>
-        <div class="time-score">
-            Time/Score:
-        </div>
+    </div>
 
-    </header>
 
-    <main>
-        <section class="eachPage" id="question-1">
-            <h2>
-                Question 1
-            </h2>
-            <h3>
-                1. A very useful tool used during development and debugging for printing content to the debugger is:
-            </h3>
-            <p>
-            <ol class="answer-options">
-                <li class="each-answer">JavaScript</li>
-                <li class="each-answer">terminal / bash</li>
-                <li class="each-answer">for loops</li>
-                <li class="each-answer">console.log</li>
-            </ol>
-            </p>
 
-        </section>
-
-        <section class="eachPage" id="question-2">
-            <h2>
-                Question 2
-            </h2>
-            <h3>
-                2. Arrays in JavaScript can be used to store ______.
-            </h3>
-            <p>
-            <ol class="answer-options">
-                <li class="each-answer">numbers and strings</li>
-                <li class="each-answer">other arrays</li>
-                <li class="each-answer">booleans</li>
-                <li class="each-answer">all of the above</li>
-            </ol>
-            </p>
-
-        </section>
-
-        <section class="eachPage" id="question-3">
-            <h2>
-                Question 3
-            </h2>
-            <h3>
-                3. String values must be enclosed within ____ when being assigned to variables.
-            </h3>
-            <p>
-            <ol class="answer-options">
-                <li class="each-answer">commas</li>
-                <li class="each-answer">curly brackets</li>
-                <li class="each-answer">quotes</li>
-                <li class="each-answer">parentheses</li>
-            </ol>
-            </p>
-
-        </section>
-
-        <section class="eachPage" id="question-4">
-            <h2>
-                Question 4
-            </h2>
-            <h3>
-                4. The condition in an if/else statement is enclosed within ____.
-            </h3>
-            <p>
-            <ol class="answer-options">
-                <li class="each-answer">quotes</li>
-                <li class="each-answer">curly brackets</li>
-                <li class="each-answer">parentheses</li>
-                <li class="each-answer">square brackets</li>
-            </ol>
-            </p>
-
-        </section>
-
-        <section class="eachPage" id="question-5">
-            <h2>
-                Question 5
-            </h2>
-            <h3>
-                5. Commonly used data types DO NOT include:
-            </h3>
-            <p>
-            <ol class="answer-options">
-                <li class="each-answer">strings</li>
-                <li class="each-answer">booleans</li>
-                <li class="each-answer">alerts</li>
-                <li class="each-answer">numbers</li>
-            </ol>
-            </p>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-    </footer>
-    <script src="./Assets/script.js"></script>
+    <script src="./Assets/js/script.js"></script>
 </body>
 
 </html>
