@@ -1,18 +1,18 @@
-var startButton;
-var quizScreen;
+// var startButton;
+// var quizScreen;
 
-var duration = 20;
-var countdown = document.getElementById('time');
+// var duration = 20;
+// var countdown = document.getElementById('time');
 
-var timer = setInterval(() => {
-    countdown.textContent = duration;
-    duration--;
+// var timer = setInterval(() => {
+//     countdown.textContent = duration;
+//     duration--;
 
-    if (duration ===0) {
-        clearInterval(timer);
-        countdown.innerHTML = "Time's up!";
-    }
-}, 1000);
+//     if (duration ===0) {
+//         clearInterval(timer);
+//         countdown.innerHTML = "Time's up!";
+//     }
+// }, 1000);
 
 var question = document.querySelector('#question');
 var choices = Array.from(document.querySelectorAll('.choice-text'));
@@ -22,7 +22,7 @@ var progressBarFull = document.querySelector('#progressBarFull');
 
 var currentQuestion = {};
 var acceptingAnswers = true;
-var score = 20;
+var score = 0;
 var questionCounter = 0;
 var availableQuestions = [];
 
@@ -66,7 +66,7 @@ var MAX_QUESTIONS = 4;
 
 startGame = () => {
     questionCounter = 0;
-    score = 20;
+    score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
 }
@@ -75,12 +75,12 @@ getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
 
-        return window.location.assign('/end.html');
+        return window.location.assign('./end.html');
     }
 
     questionCounter++;
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS)*100}%`;
+    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
     var questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
@@ -109,8 +109,8 @@ choices.forEach(choice => {
         var classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         // score increment NEEDS TO BE CHANGED TO A TIMER AND DECREMENT
-        if (classToApply === 'incorrect') {
-            score = score - 5;
+        if (classToApply === 'correct') {
+            incrementScore(SCORE_POINTS);
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
@@ -120,8 +120,8 @@ choices.forEach(choice => {
             getNewQuestion();
 
         }, 1000)
-    })
-})
+    });
+});
 
 incrementScore = num => {
     score += num;
