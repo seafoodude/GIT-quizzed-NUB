@@ -1,7 +1,7 @@
 var username = document.querySelector('#username');
 var saveScoreBtn = document.querySelector('#saveScoreBtn');
 var finalScore = document.querySelector('#finalScore');
-var mostRecentScore = document.querySelector('#mostRecentScore');
+var mostRecentScore = localStorage.getItem('mostRecentScore');
 
 var highScores = JSON.parse(localStorage.getItem('highscores')) || [];
 
@@ -9,7 +9,7 @@ var MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
 
-username.addEventListener('kepup', () => {
+username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
 })
 
@@ -27,7 +27,7 @@ saveHighScore = e => {
         return b.score - a.score;
     })
 
-    highScores.splice(5)
+    highScores.splice(MAX_HIGH_SCORES);
 
     localStorage.setItem('highscores', JSON.stringify(highScores));
     window.location.assign('/');

@@ -1,7 +1,7 @@
 var startButton;
 var quizScreen;
 
-var duration = 60;
+var duration = 20;
 var countdown = document.getElementById('time');
 
 var timer = setInterval(() => {
@@ -22,7 +22,7 @@ var progressBarFull = document.querySelector('#progressBarFull');
 
 var currentQuestion = {};
 var acceptingAnswers = true;
-var score = 0;
+var score = 20;
 var questionCounter = 0;
 var availableQuestions = [];
 
@@ -66,7 +66,7 @@ var MAX_QUESTIONS = 4;
 
 startGame = () => {
     questionCounter = 0;
-    score = 0;
+    score = 20;
     availableQuestions = [...questions];
     getNewQuestion();
 }
@@ -84,7 +84,7 @@ getNewQuestion = () => {
 
     var questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
-    question.innertext = currentQuestion.question;
+    question.innerText = currentQuestion.question;
 
     choices.forEach(choice => {
         var number = choice.dataset['number']
@@ -109,8 +109,8 @@ choices.forEach(choice => {
         var classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         // score increment NEEDS TO BE CHANGED TO A TIMER AND DECREMENT
-        if (classToApply === 'correct') {
-            incrementScore(SCORE_POINTS);
+        if (classToApply === 'incorrect') {
+            score = score - 5;
         }
 
         selectedChoice.parentElement.classList.add(classToApply);

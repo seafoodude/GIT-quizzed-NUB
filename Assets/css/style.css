@@ -25,12 +25,12 @@ h2 {
     margin-bottom: 4rem;
 }
 
-/* p {
+.description {
     font-size: 2.4rem;
     margin-bottom: 3rem;
     color: var(--purp);
     text-align: center;
-} */
+}
 
 .container {
     width: 100vw;
