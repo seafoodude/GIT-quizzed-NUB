@@ -1,7 +1,7 @@
 var startButton;
 var quizScreen;
 
-var duration = 20;
+var duration = 60;
 var countdown = document.getElementById('time');
 
 var timer = setInterval(() => {
@@ -114,6 +114,8 @@ choices.forEach(choice => {
         // score increment NEEDS TO BE CHANGED TO A TIMER AND DECREMENT
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
+        } else {
+            duration = duration - 15;
         }
 
         selectedChoice.parentElement.classList.add(classToApply);

@@ -54,6 +54,10 @@ body {
     text-align: center;
 }
 
+#time-remaining {
+    font-size: 3rem;
+}
+
 #progressBar {
     width: 20rem;
     height: 3rem;
