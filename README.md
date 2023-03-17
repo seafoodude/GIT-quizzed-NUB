@@ -1,6 +1,6 @@
 # Homework-4-codequiz
 
-https://seafoodude.github.io/homework-3-passgen/
+
 
 ## Description
 
@@ -28,12 +28,11 @@ To use this Homework 4 Codequiz, first read the description. Click on Play to st
 
 
 **SCREENSHOTS**
-![Screenshot of Initial Screen](./Assets/imgs/03-javascript-homework-demo.png)
-![Screenshot of Password Length](./Assets/imgs/passlength.PNG)
-![Screenshot of LowerCase](./Assets/imgs/lowcase.PNG)
-![Screenshot of UpperCase](./Assets/imgs/upcase.PNG)
-![Screenshot of Numeric](./Assets/imgs/numeric.PNG)
-![Screenshot of Special Characters](./Assets/imgs/specchar.PNG)
+![Screenshot of Initial Screen](./Assets/imgs/CodeQuizChallengeSS.PNG)
+![Screenshot of Questions](./Assets/imgs/QuestionSS.PNG)
+![Screenshot of EndPage](./Assets/imgs/endPageSS.PNG)
+![Screenshot of Leaderboard](./Assets/imgs/LeaderboardSS.PNG)
+
 
 
 ## Credits
