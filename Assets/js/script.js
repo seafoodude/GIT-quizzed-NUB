@@ -124,7 +124,7 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
 
-        }, 1000)
+        }, 500)
     });
 });
 
