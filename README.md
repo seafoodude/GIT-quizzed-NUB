@@ -1,6 +1,6 @@
 # Homework-4-codequiz
 
-https://seafoodude.github.io/homework-4-codequiz/
+https://seafoodude.github.io/GIT-quizzed-NUB/
 
 ## Description
 
